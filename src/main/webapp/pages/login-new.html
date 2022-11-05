@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Shimba Bootstrap 4 Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+  <meta content="Beethemesdesign" name="author" />
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="/assets/images/favicon.png">
+
+
+  <!-- Required css -->
+  <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/css/style.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<!-- Required js -->
+<script src="/assets/js/app.js"></script>
+<script>
+  var roleRadio = document.getElementsByName("roles");
+
+  function submitHandler() {
+    var role = '';
+
+    for (var i = 0; i < roleRadio.length; i++) {
+      if (roleRadio[i].checked) {
+        role = roleRadio[i].value;
+      }
+    }
+
+    var action = null;
+    if (role === 'student') {
+      action = "/loginController/studentlogin";
+    } else if (role === 'teacher') {
+      action = "/loginController/teacherlogin";
+    } else {
+      action = "/loginController/adminlogin";
+    }
+    document.getElementById("login").action = action;
+
+    return true;
+  }
+</script>
+
+<body class="authentication-bg">
+
+<div class="account-pages mt-5 mb-1">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-5">
+        <div class="card mb-0">
+
+          <!-- Logo -->
+          <div class="card-body pt-4 pb-0 text-center">
+            <h2>学生选课信息管理系统</h2>
+          </div>
+
+          <div class="card-body p-4">
+            <form method="post" name="login" id="login" onsubmit="submitHandler()">
+              <div class="row justify-content-center">
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="customRadioInline1" name="roles" value="admin" class="custom-control-input" checked>
+                  <label class="custom-control-label" for="customRadioInline1">管理员</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="customRadioInline2" name="roles" value="teacher" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadioInline2">教师</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="customRadioInline3" name="roles" value="student" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadioInline3">学生</label>
+                </div>
+              </div>
+              <div class="form-group" style="margin-top: 30px">
+                <label for="emailaddress">账号/教师编号/学生学号</label>
+                <input class="form-control" id="emailaddress" name="uname" placeholder="请输入您的账号/教师编号/学生学号">
+              </div>
+              <div class="form-group">
+                <label for="password">密码</label>
+                <input class="form-control" type="password" id="password" name="upwd" placeholder="请输入您的密码">
+              </div>
+              <div class="form-group mb-3">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="checkbox-signin" checked>
+                  <label class="custom-control-label" for="checkbox-signin">保存密码</label>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-8">
+                  <div class="form-group mb-0">
+                    <input class="btn btn-primary btn-block" type="submit" value="登录"/>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+
+
+      </div> <!-- end col -->
+    </div>
+    <!-- end row -->
+  </div>
+  <!-- end container -->
+</div>
+<!-- end page -->
+
+</body>
+
+</html>
