@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface StudentDao {
 
-    @Insert("insert into student values (id = #{id}, name = #{name}, password = #{password}, gender = #{gender}, " +
-            "major = #{major}, college = #{college})")
+    @Insert("insert into student (id, name, gender, password, age, major, college) values (#{id}, #{name}, #{gender}, #{password}, " +
+            "#{age}, #{major}, #{college})")
     public int addStudent(Student student);
 
     @Delete("delete from student where id = #{id}")
