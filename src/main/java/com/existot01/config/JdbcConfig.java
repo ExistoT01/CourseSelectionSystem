@@ -29,7 +29,7 @@ public class JdbcConfig {
     }
 
     @Bean
-    public PlatformTransactionManager transactionManager (DruidDataSource dataSource) {
+    public PlatformTransactionManager transactionManager (DataSource dataSource) {
         DataSourceTransactionManager manager = new DataSourceTransactionManager();
         manager.setDataSource(dataSource);
         return manager;

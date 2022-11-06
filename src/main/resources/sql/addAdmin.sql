@@ -7,8 +7,9 @@
 --
 
 drop table if exists admin;
-CREATE TABLE admin  (
-    Aname varchar(12) NOT NULL,
+CREATE TABLE admin
+(
+    Aname     varchar(12) NOT NULL,
     Apassword varchar(12) NOT NULL,
     PRIMARY KEY (`Aname`)
 );
@@ -16,4 +17,5 @@ CREATE TABLE admin  (
 --
 -- 管理员数据
 --
-insert into admin values ('admin', '000000');
+insert into admin
+values ('admin', '000000');

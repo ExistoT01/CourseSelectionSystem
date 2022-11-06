@@ -5,31 +5,28 @@ public class Student {
     private String id;
     // 姓名
     private String name;
+    // 性别
+    private String gender;
     // 密码
     private String password;
     // 年龄
     private Integer age;
-    // 性别
-    private String gender;
     // 专业
     private String major;
     // 学院
     private String college;
 
-    /**
-     * 无参构造
-     */
-    public Student() {
-    }
-
-    /**
-     * 使用学号与姓名构造
-     * @param id
-     * @param name
-     */
-    public Student(String id, String name) {
-        this.id = id;
-        this.name = name;
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", gender='" + gender + '\'' +
+                ", password='" + password + '\'' +
+                ", age=" + age +
+                ", major='" + major + '\'' +
+                ", college='" + college + '\'' +
+                '}';
     }
 
     public String getId() {

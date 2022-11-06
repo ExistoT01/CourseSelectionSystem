@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8"/>
+  <title>Shimba Bootstrap 4 Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description"/>
+  <meta content="Beethemesdesign" name="author"/>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="/assets/images/favicon.png">
+
+  <link href="/assets/css/bootstrap-table.min.css" rel="stylesheet">
+
+  <!-- third party css -->
+  <!--<link href="/assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css"/>-->
+  <!-- third party css end -->
+
+  <!-- Required css -->
+  <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/assets/css/style.css" rel="stylesheet" type="text/css"/>
+
+  <!--jquery-->
+  <!--<script src="/assets/js/jquery-3.6.1.min.js"></script>-->
+
+  <!--bootstrap-table-->
+
+  <!--<script src="/assets/js/bootstrap-table.min.js"></script>-->
+
+  <!--<script src="/assets/js/tableInit.js"></script>-->
+
+
+</head>
+
+<body>
+
+<!-- Begin page -->
+<div class="wrapper">
+
+  <!-- ============================================================= -->
+  <!-- ===============    side menu content start  ================= -->
+  <!-- ============================================================= -->
+  <div class="left-side-menu">
+    <div class="slimscroll-menu">
+      <!-------------------------------------->
+      <!-------------------------------------->
+      <!-------------------------------------->
+      <!-- User details start -->
+      <div class="sidenav-user" style="margin-top: 80px">
+        <h4 class="mb-1 mt-0">欢迎</h4>
+        <p class="mb-2">- 管理员 -</p>
+        <img src="/assets/images/users/avatar-admin.png" alt="" class="rounded-circle">
+      </div>
+      <!-- User details end -->
+      <!-------------------------------------->
+      <!-------------------------------------->
+      <!-- Menu link start -->
+      <ul class="metismenu side-nav">
+        <li class="menu-caption menu-item">导航栏</li>
+        <li class="menu-item">
+          <a href="home.html" class="menu-link">
+            <i class="feather icon-home"></i>
+            <span> 主页 </span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="javascript: void(0);" class="menu-link">
+            <i class="feather icon-users"></i>
+            <span> 学生管理 </span>
+            <span class="menu-sub-icon"></span>
+          </a>
+          <ul class="menu-level-second collapse" aria-expanded="false">
+            <li><a href="widgets-simple.html">添加学生</a></li>
+            <li><a href="widgets-data.html">删除学生</a></li>
+            <li><a href="widgets-chart.html">查询学生</a></li>
+            <li><a href="widgets-chart.html">修改学生</a></li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="javascript: void(0);" class="menu-link">
+            <i class="feather icon-users"></i>
+            <span> 教师管理 </span>
+            <span class="menu-sub-icon"></span>
+          </a>
+          <ul class="menu-level-second collapse" aria-expanded="false">
+            <li><a href="widgets-simple.html">Statistics</a></li>
+            <li><a href="widgets-data.html">Data</a></li>
+            <li><a href="widgets-chart.html">Chart</a></li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="javascript: void(0);" class="menu-link">
+            <i class="feather icon-list"></i>
+            <span> 课程管理 </span>
+            <span class="menu-sub-icon"></span>
+          </a>
+          <ul class="menu-level-second collapse" aria-expanded="false">
+            <li><a href="widgets-simple.html">Statistics</a></li>
+            <li><a href="widgets-data.html">Data</a></li>
+            <li><a href="widgets-chart.html">Chart</a></li>
+          </ul>
+        </li>
+        <!-- Menu link end -->
+        <!-------------------------------------->
+
+        <div class="clearfix"></div>
+      </ul>
+    </div>
+  </div>
+  <!-- ============================================================= -->
+  <!-- ===============     side menu content End   ================= -->
+  <!-- ============================================================= -->
+
+
+  <!-- ============================================================== -->
+  <!-- Start Page Content here -->
+  <!-- ============================================================== -->
+
+  <div class="content-page">
+    <div class="content">
+
+      <!-- ============================================================= -->
+      <!-- ===============    Top bar header content start  ================= -->
+      <!-- ============================================================= -->
+      <div class="navbar-custom">
+        <!------------------------------------->
+        <!-- right side topbar content start -->
+        <ul class="list-unstyled topbar-right-menu float-right mb-0">
+          <li class="dropdown notification-list">
+            <a class="nav-link dropdown-toggle nav-user arrow-none mx-0" data-toggle="dropdown" href="#"
+               role="button" aria-haspopup="false" aria-expanded="false">
+                                <span class="account-user-avatar">
+                                    <img src="/assets/images/users/avatar-admin.png" alt="user-image"
+                                         class="rounded-circle">
+                                </span>
+              <span>
+                                    <span class="account-user-name">Admin</span>
+                                </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
+              <a href="javascript:" class="dropdown-item"><i class="feather icon-user text-muted"></i>
+                &nbsp; My profile</a>
+              <a href="javascript:" class="dropdown-item"><i class="feather icon-mail text-muted"></i>
+                &nbsp; Messages</a>
+              <a href="javascript:" class="dropdown-item"><i class="feather icon-settings text-muted"></i>
+                &nbsp; settings</a>
+              <div class="dropdown-divider"></div>
+              <a href="javascript:" class="dropdown-item"><i class="feather icon-power text-danger"></i>
+                &nbsp; Log Out</a>
+            </div>
+          </li>
+        </ul>
+        <!-- right side topbar content end -->
+        <!------------------------------------->
+
+        <!---------------------------------------------->
+        <!-- Left side topbar content Start -->
+
+        <!-- Minimenu and mobille toggle button start -->
+        <button class="button-menu-mobile open-left">
+          <i class="feather icon-menu"></i>
+        </button>
+        <!-- Minimenu and mobille toggle button end -->
+
+
+        <div class="header-search">
+          <form>
+            <div class="input-group">
+              <span class="feather icon-search"></span>
+              <input type="text" class="form-control" placeholder="Search...">
+            </div>
+          </form>
+        </div>
+        <!-- Left side topbar content end -->
+        <!------------------------------------->
+      </div>
+      <!-- ================================================================== -->
+      <!-- ===============    Top bar header content end  ================= -->
+      <!-- ================================================================== -->
+
+
+    </div>
+
+
+    <!-- Start Content-->
+    <div class="container-fluid">
+
+      <!-- start page title -->
+      <div class="row">
+        <div class="col-12">
+          <div class="page-title-box">
+            <h4 class="page-title">添加学生信息</h4>
+          </div>
+        </div>
+      </div>
+      <!-- end page title -->
+
+      <div class="card">
+        <div class="card-body">
+          <h5>Form controls</h5>
+          <hr>
+          <div class="row">
+            <div class="col-md-6">
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn  btn-primary">Submit</button>
+              </form>
+            </div>
+            <div class="col-md-6">
+              <form>
+                <div class="form-group">
+                  <label>Text</label>
+                  <input type="text" class="form-control" placeholder="Text">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Example select</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Example textarea</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- container -->
+
+
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- End Page content -->
+  <!-- ============================================================== -->
+
+
+</div>
+<!-- END wrapper -->
+
+
+<!-- Required js -->
+<script src="/assets/js/app.js"></script>
+
+
+<!-- third party js -->
+<script src="/assets/js/vendor/Chart.bundle.min.js"></script>
+<!--<script src="/assets/js/vendor/jquery-jvectormap-1.2.2.min.js"></script>-->
+<!--<script src="/assets/js/vendor/jquery-jvectormap-world-mill-en.js"></script>-->
+<!-- third party js ends -->
+
+<!-- third party:js -->
+<script src="/assets/js/vendor/apexcharts.min.js"></script>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+<script src="/assets/js/tableInit.js"></script>
+
+
+<!-- demo app -->
+<!--<script src="/assets/js/demo/demo.dashboard.js"></script>-->
+<!-- end demo js-->
+</body>
+
+</html>

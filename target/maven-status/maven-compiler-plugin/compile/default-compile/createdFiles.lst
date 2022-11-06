@@ -6,7 +6,9 @@ com\existot01\dao\AdminDao.class
 com\existot01\controller\AdminController.class
 com\existot01\domain\Student.class
 com\existot01\config\JdbcConfig.class
+com\existot01\controller\Result.class
 com\existot01\service\AdminService.class
+com\existot01\controller\Code.class
 com\existot01\config\SpringMvcConfig.class
 com\existot01\domain\Admin.class
 com\existot01\service\impl\AdminServiceImpl.class

@@ -6,6 +6,14 @@ public class Admin {
     // 密码
     String password;
 
+    @Override
+    public String toString() {
+        return "Admin{" +
+                "id='" + id + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
+
     public Admin(String id, String password) {
         this.id = id;
         this.password = password;

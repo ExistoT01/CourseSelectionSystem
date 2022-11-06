@@ -30,6 +30,7 @@ public class LoginController {
 
         Admin admin = adminService.getByIdPassword(id, password);
         if (admin != null) {
+            System.out.println(admin);
             System.out.println("登录成功");
             httpSession.setAttribute("id", id);
             httpSession.setAttribute("password", password);
