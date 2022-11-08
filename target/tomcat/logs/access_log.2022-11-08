@@ -1912,3 +1912,5 @@
 0:0:0:0:0:0:0:1 - - [08/Nov/2022:16:04:00 +0800] "GET /assets/fonts/Quicksand-Bold.ttf HTTP/1.1" 200 102704 http-bio-80-exec-4 3
 0:0:0:0:0:0:0:1 - - [08/Nov/2022:16:04:00 +0800] "GET /assets/fonts/materialdesignicons-webfont.woff2?v=3.2.89 HTTP/1.1" 200 169440 http-bio-80-exec-9 4
 0:0:0:0:0:0:0:1 - - [08/Nov/2022:16:04:00 +0800] "GET /assets/js/metisMenu.js.map HTTP/1.1" 404 949 http-bio-80-exec-9 2
+0:0:0:0:0:0:0:1 - - [08/Nov/2022:16:56:01 +0800] "GET /adminController/student/id/20020007094 HTTP/1.1" 404 949 http-bio-80-exec-7 18
+0:0:0:0:0:0:0:1 - - [08/Nov/2022:16:56:21 +0800] "GET /adminController/student/id/?id=20020007094 HTTP/1.1" 200 170 http-bio-80-exec-7 67
