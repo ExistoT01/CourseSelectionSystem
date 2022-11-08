@@ -30,6 +30,11 @@ public class StudentServiceTest {
         System.out.println(all);
     }
 
-
+    @Test
+    public void testGetStudentByName() {
+        Student student = studentService.getStudentByName("习六");
+        System.out.println(student);
+        // System.out.println(student.getId());
+    }
 
 }

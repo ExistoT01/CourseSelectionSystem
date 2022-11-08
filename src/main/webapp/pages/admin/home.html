@@ -15,7 +15,12 @@
     <link href="/assets/css/bootstrap-table.min.css" rel="stylesheet">
 
     <!-- third party css -->
-    <!--<link href="/assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css"/>-->
+    <link href="/assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/vendor/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/vendor/responsive.bootstrap4.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/vendor/buttons.bootstrap4.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/vendor/select.bootstrap4.css" rel="stylesheet" type="text/css" />
+
     <!-- third party css end -->
 
     <!-- Required css -->
@@ -73,8 +78,7 @@
                     </a>
                     <ul class="menu-level-second collapse" aria-expanded="false">
                         <li><a href="/pages/admin/addStudent.html">添加学生</a></li>
-                        <li><a href="widgets-data.html">删除学生</a></li>
-                        <li><a href="widgets-chart.html">查询学生</a></li>
+                        <li><a href="/pages/admin/deleteStudent.html">查询/删除学生</a></li>
                         <li><a href="widgets-chart.html">修改学生</a></li>
                     </ul>
                 </li>
@@ -202,6 +206,17 @@
                     <div class="card">
                         <div class="card-body">
                             <table id="basic-datatable" class="table dt-responsive nowrap" width="100%">
+                                <thead>
+                                <tr>
+                                    <th>学号</th>
+                                    <th>姓名</th>
+                                    <th>性别</th>
+                                    <th>密码</th>
+                                    <th>年龄</th>
+                                    <th>专业</th>
+                                    <th>学院</th>
+                                </tr>
+                                </thead>
                             </table>
                         </div>
                     </div>
@@ -220,7 +235,6 @@
 </div>
 <!-- END wrapper -->
 
-
 <!-- Required js -->
 <script src="/assets/js/app.js"></script>
 
@@ -237,12 +251,31 @@
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
-<script src="/assets/js/tableInit.js"></script>
 
+
+<!-- my func js-->
+<script src="/assets/js/tableInit.js"></script>
+<script src="/assets/js/admin/queryStudent.js"></script>
+<!-- my func js end-->
 
 <!-- demo app -->
-<!--<script src="/assets/js/demo/demo.dashboard.js"></script>-->
+<script src="/assets/js/demo/demo.datatable-init.js"></script>
 <!-- end demo js-->
+
+<!-- third party js -->
+<script src="/assets/js/vendor/jquery.dataTables.js"></script>
+<script src="/assets/js/vendor/dataTables.bootstrap4.js"></script>
+<script src="/assets/js/vendor/dataTables.responsive.min.js"></script>
+<script src="/assets/js/vendor/responsive.bootstrap4.min.js"></script>
+<script src="/assets/js/vendor/dataTables.buttons.min.js"></script>
+<script src="/assets/js/vendor/buttons.bootstrap4.min.js"></script>
+<script src="/assets/js/vendor/buttons.html5.min.js"></script>
+<script src="/assets/js/vendor/buttons.flash.min.js"></script>
+<script src="/assets/js/vendor/buttons.print.min.js"></script>
+<script src="/assets/js/vendor/dataTables.keyTable.min.js"></script>
+<script src="/assets/js/vendor/dataTables.select.min.js"></script>
+<!-- third party js ends -->
+
 </body>
 
 </html>

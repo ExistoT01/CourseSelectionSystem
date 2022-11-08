@@ -1,6 +1,7 @@
-const url = '/adminController/addStudent';
 
 function addStudentFunc() {
+    let url = '/adminController/addStudent';
+
     let id = $("#idInput").val();
     let password = $("#passwordInput").val();
     let name = $("#nameInput").val();

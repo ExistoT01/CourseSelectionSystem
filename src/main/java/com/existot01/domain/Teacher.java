@@ -14,6 +14,18 @@ public class Teacher {
     // 教师简介
     private String intro;
 
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", age=" + age +
+                ", gender='" + gender + '\'' +
+                ", intro='" + intro + '\'' +
+                '}';
+    }
+
     /**
      * 无参构造
      */

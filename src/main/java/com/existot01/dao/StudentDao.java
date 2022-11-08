@@ -27,6 +27,13 @@ public interface StudentDao {
     @Select("select * from student where id = #{id}")
     public Student getStudentById(@Param("id") String id);
 
+    @Select("select * from student where name = #{name}")
+    public Student getStudentByName(@Param("name") String name);
+
+    @Select("select * from student where id = #{id} and password = #{password}")
+    public Student getStudentByIdPassword(@Param("id") String id, @Param("password") String password);
+
     @Select("select * from student")
     public List<Student> getAllStudents();
+
 }

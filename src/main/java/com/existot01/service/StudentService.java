@@ -52,6 +52,22 @@ public interface StudentService {
     public Student getStudentById(String id);
 
     /**
+     * 根据姓名查询学生
+     * @param name
+     * @return 学生实体
+     */
+    public Student getStudentByName(String name);
+
+
+    /**
+     * 根据学号密码查询学生
+     * @param id
+     * @param password
+     * @return 学生实体
+     */
+    public Student getStudentByIdPassword(String id, String password);
+
+    /**
      * 查询所有学生
      * @return 学生集合
      */

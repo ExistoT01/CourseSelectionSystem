@@ -1,42 +1,37 @@
+// 睡眠函数
+function sleep (time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+}
+
+
 function tableInit() {
-    $("#basic-datatable").bootstrapTable({
+    let url = '/adminController/students';
+
+    $.ajax({
         method: "get",
-        url: "/adminController/students",
-        sidePagination: "server",
-        pageNumber: 1,
+        url: url,
+        success: (res) => {
+            let tableHTML = '';
+            let data = res.data;
+            if(data instanceof Array) {
+                for (let i = 0; i < data.length; ++i) {
+                    tableHTML += '<tr>' +
+                        '<td>' + data[i].id + '</td>' +
+                        '<td>' + data[i].name + '</td>' +
+                        '<td>' + data[i].gender + '</td>' +
+                        '<td>' + data[i].password + '</td>' +
+                        '<td>' + data[i].age + '</td>' +
+                        '<td>' + data[i].major + '</td>' +
+                        '<td>' + data[i].college + '</td>' +
+                        '</tr>'
+                }
+            }
 
-        columns: [{
-            field: 'id',
-            title: '学号'
-        }, {
-            field: 'name',
-            title: '姓名'
-        }, {
-            field: 'gender',
-            title: '性别'
-        }, {
-            field: 'password',
-            title: '密码'
-        }, {
-            field: 'age',
-            title: '年龄'
-        }, {
-            field: 'major',
-            title: '专业'
-        }, {
-            field: 'college',
-            title: '学院'
-        }],
-
-        onLoadSuccess: function(){  //加载成功时执行
-            console.info("加载成功");
+            $("#basic-datatable").append(tableHTML);
         },
-        onLoadError: function(){  //加载失败时执行
-            console.info("加载数据失败");
-        }
-    })
+        error: () => alert("数据查询失败")
+    });
 }
 
 tableInit()
 
-console.log("我来过")
