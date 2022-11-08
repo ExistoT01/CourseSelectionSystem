@@ -110,21 +110,21 @@
 
  ## 功能
 
-<img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20221108152809252.png" alt="image-20221108152809252" style="zoom:80%;" />
+<img src="https://expicture.oss-cn-beijing.aliyuncs.com/img/202211081703174.png" alt="image-20221108152809252" style="zoom:80%;" />
 
 ## 部分界面演示
 
 - 登录界面
 
-  <img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20221108152959097.png" alt="image-20221108152959097" style="zoom:80%;" />
+  <img src="https://expicture.oss-cn-beijing.aliyuncs.com/img/202211081703176.png" alt="image-20221108152959097" style="zoom:80%;" />
 
 - 管理员主页
 
-  <img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20221108160340922.png" alt="image-20221108160340922" style="zoom:67%;" />
+  <img src="https://expicture.oss-cn-beijing.aliyuncs.com/img/202211081703177.png" alt="image-20221108160340922" style="zoom:67%;" />
 
 - 添加学生
 
-  <img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20221108160407590.png" alt="image-20221108160407590" style="zoom:80%;" />
+  <img src="https://expicture.oss-cn-beijing.aliyuncs.com/img/202211081703178.png" alt="image-20221108160407590" style="zoom:80%;" />
 
 > 更多页面请导入项目后浏览
 
@@ -264,7 +264,7 @@
 
   在前后端发送请求的过程中，制定响应码 `Code`， 易于之后的 debug
 
-  <img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20221108165645959.png" alt="image-20221108165645959" style="zoom:80%;" />
+  <img src="https://expicture.oss-cn-beijing.aliyuncs.com/img/202211081703179.png" alt="image-20221108165645959" style="zoom:80%;" />
 
   ```java
   public class Code {
