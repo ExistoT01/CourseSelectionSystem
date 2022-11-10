@@ -30,6 +30,12 @@ public class AdminController {
         return new Result(code, student, msg);
     }
 
+    @DeleteMapping("/student/id")
+    public Result deleteStudentById(@RequestParam("id") String id) {
+        boolean res = studentService.deleteStudentByid(id);
+        return new Result(res ? Code.DEL_OK : Code.DEL_ERR, res);
+    }
+
     @GetMapping("/student/name")
     public Result getStudentByName(@RequestParam("name") String name) {
         //解决中文乱码   要注意用SpringBoot时不需要进行中文乱码处理

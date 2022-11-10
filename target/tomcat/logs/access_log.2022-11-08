@@ -1914,3 +1914,10 @@
 0:0:0:0:0:0:0:1 - - [08/Nov/2022:16:04:00 +0800] "GET /assets/js/metisMenu.js.map HTTP/1.1" 404 949 http-bio-80-exec-9 2
 0:0:0:0:0:0:0:1 - - [08/Nov/2022:16:56:01 +0800] "GET /adminController/student/id/20020007094 HTTP/1.1" 404 949 http-bio-80-exec-7 18
 0:0:0:0:0:0:0:1 - - [08/Nov/2022:16:56:21 +0800] "GET /adminController/student/id/?id=20020007094 HTTP/1.1" 200 170 http-bio-80-exec-7 67
+0:0:0:0:0:0:0:1 - - [08/Nov/2022:17:35:27 +0800] "GET / HTTP/1.1" 304 - http-bio-80-exec-5 19
+0:0:0:0:0:0:0:1 - - [08/Nov/2022:17:35:27 +0800] "GET /assets/js/app.js HTTP/1.1" 200 847581 http-bio-80-exec-5 17
+0:0:0:0:0:0:0:1 - - [08/Nov/2022:17:35:27 +0800] "GET /assets/images/bg-auth-2.jpg HTTP/1.1" 200 128411 http-bio-80-exec-5 23
+0:0:0:0:0:0:0:1 - - [08/Nov/2022:17:35:27 +0800] "GET /assets/fonts/Quicksand-Regular.ttf HTTP/1.1" 200 101928 http-bio-80-exec-2 4
+0:0:0:0:0:0:0:1 - - [08/Nov/2022:17:35:27 +0800] "GET /assets/fonts/Quicksand-Bold.ttf HTTP/1.1" 200 102704 http-bio-80-exec-5 4
+0:0:0:0:0:0:0:1 - - [08/Nov/2022:17:35:27 +0800] "GET /assets/images/favicon.png HTTP/1.1" 200 3180 http-bio-80-exec-2 1
+0:0:0:0:0:0:0:1 - - [08/Nov/2022:17:35:49 +0800] "GET /assets/js/metisMenu.js.map HTTP/1.1" 404 949 http-bio-80-exec-6 7

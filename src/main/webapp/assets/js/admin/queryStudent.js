@@ -98,3 +98,40 @@ function queryStudent() {
         })
     }
 }
+
+function deleteStudent() {
+    let url = '/adminController/student/';
+
+    // alert('whats up')
+    let selection = $("#deleteConditionSelect option:selected").index()
+    let keyword = $("#deleteKeyWord").val();
+
+    console.log('selection =', selection);
+    console.log('keyword =', keyword);
+
+    if (selection === 0) {
+        // 按学号
+        $.ajax({
+            type: "DELETE",
+            url: url + 'id/' + '?id=' + keyword,
+            success: (res) => {
+                alert("删除成功！");
+                // 刷新页面
+                window.location.href = window.location.href;
+            },
+            error: () => alert("数据查询失败")
+        })
+    } else {
+        // 按姓名
+        $.ajax({
+            type: "DELETE",
+            url: url + 'name/' + '?name=' + keyword,
+            success: (res) => {
+                alert("删除成功！");
+                // 刷新页面
+                window.location.href = window.location.href;
+            },
+            error: () => alert("数据查询失败")
+        })
+    }
+}
