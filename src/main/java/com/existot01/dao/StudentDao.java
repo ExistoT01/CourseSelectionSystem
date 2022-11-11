@@ -17,7 +17,7 @@ public interface StudentDao {
     @Delete("delete from student where name = #{name}")
     public int deleteStudentByName(String name);
 
-    @Update("update student set name = #{name}, password = #{password}, ender = #{gender}, " +
+    @Update("update student set name = #{name}, password = #{password}, gender = #{gender}, " +
             "major = #{major}, college = #{college} where id = #{id}")
     public int modifyStudent(Student student);
 

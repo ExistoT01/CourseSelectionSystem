@@ -12,15 +12,13 @@
     <!-- favicon -->
     <link rel="shortcut icon" href="/assets/images/favicon.png">
 
-    <link href="/assets/css/bootstrap-table.min.css" rel="stylesheet">
+    <!--<link href="/assets/css/bootstrap-table.min.css" rel="stylesheet">-->
 
     <!-- third party css -->
-    <link href="/assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css"/>
-    <link href="/assets/css/vendor/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
-    <link href="/assets/css/vendor/responsive.bootstrap4.css" rel="stylesheet" type="text/css" />
-    <link href="/assets/css/vendor/buttons.bootstrap4.css" rel="stylesheet" type="text/css" />
-    <link href="/assets/css/vendor/select.bootstrap4.css" rel="stylesheet" type="text/css" />
-
+    <link href="/assets/css/vendor/dataTables.bootstrap4.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/vendor/responsive.bootstrap4.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/vendor/buttons.bootstrap4.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/vendor/select.bootstrap4.css" rel="stylesheet" type="text/css"/>
     <!-- third party css end -->
 
     <!-- Required css -->
@@ -103,7 +101,7 @@
                     <ul class="menu-level-second collapse" aria-expanded="false">
                         <li><a href="/pages/admin/addStudent.html">添加课程</a></li>
                         <li><a href="/pages/admin/deleteStudent.html">查询/删除课程</a></li>
-                        <li><a href="/pages/admin/modifyStudent.html">修改课程</a></li>
+                        <li><a href="widgets-chart.html">修改课程</a></li>
                     </ul>
                 </li>
                 <!-- Menu link end -->
@@ -188,36 +186,118 @@
         </div>
 
 
-        <!-- Start Content-->
         <div class="container-fluid">
 
             <!-- start page title -->
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box">
-                        <h4 class="page-title">学生信息表</h4>
+                        <h4 class="page-title">修改学生</h4>
                     </div>
                 </div>
             </div>
             <!-- end page title -->
 
+
             <div class="row">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <table id="basic-datatable" class="table dt-responsive nowrap" width="100%">
-                                <thead>
-                                <tr>
-                                    <th>学号</th>
-                                    <th>姓名</th>
-                                    <th>性别</th>
-                                    <th>密码</th>
-                                    <th>年龄</th>
-                                    <th>专业</th>
-                                    <th>学院</th>
-                                </tr>
-                                </thead>
-                            </table>
+                            <div class="form-inline">
+                                <div class="form-group col-md-4">
+                                    <label for="deleteConditionSelect">查询条件</label>
+                                    <select class="form-control col-md-8" id="deleteConditionSelect">
+                                        <option>按学号</option>
+                                        <option>按姓名</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-8">
+                                    <label for="deleteKeyWord">查询关键字</label>
+                                    <div class="input-group col-md-10">
+                                        <input type="text" class="form-control" id="deleteKeyWord" name="deleteKeyWord"
+                                               placeholder="输入关键字">
+                                        <div class="input-group-append">
+                                            <button class="btn  btn-success" onclick="queryModifyStudent()" type="button">
+                                                查询
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-auto col-sm-12">
+                                        <img src="/assets/images/users/avatar-user.png" alt="" class="d-block ui-w-100 rounded-circle mb-3">
+                                    </div>
+                                    <div class="col">
+                                        <strong id="id" >未知id</strong>
+                                        <h4 class="font-weight-bold mb-2" id="name" style="margin-top: 20px">未知用户</h4>
+                                        <div class="text-muted mb-2" id="context">
+                                            请先查询到用户后再进行修改
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <h5>学生信息</h5>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="passwordInput">密码</label>
+                                            <input type="text" class="form-control" id="passwordInput" placeholder="输入密码">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="majorFormControlSelect">专业</label>
+                                            <select class="form-control" id="majorFormControlSelect">
+                                                <option>计算机科学与技术</option>
+                                                <option>软件工程</option>
+                                                <option>保密技术</option>
+                                                <option>人工智能</option>
+                                                <option>大数据科学与技术</option>
+                                                <option>智能科学与技术</option>
+                                                <option>网络空间安全</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group" style="margin-top: 40px">
+                                            <button type="button" onclick="modifyStudent()" class="btn  btn-primary">提交修改信息</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="ageInput">年龄</label>
+                                            <input type="number" class="form-control" id="ageInput" placeholder="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="genderFormControlSelect">性别</label>
+                                            <select class="form-control" id="genderFormControlSelect">
+                                                <option>男</option>
+                                                <option>女</option>
+                                                <option>其他</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="collegeFormControlSelect">学院</label>
+                                            <select class="form-control" id="collegeFormControlSelect">
+                                                <option>计算机学院</option>
+                                                <option>保密学院</option>
+                                                <option>软件学院</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -234,6 +314,7 @@
 
 </div>
 <!-- END wrapper -->
+
 
 <!-- Required js -->
 <script src="/assets/js/app.js"></script>
@@ -256,10 +337,11 @@
 <!-- my func js-->
 <script src="/assets/js/tableInit.js"></script>
 <script src="/assets/js/admin/queryStudent.js"></script>
+<script src="/assets/js/admin/addStudentFunc.js"></script>
 <!-- my func js end-->
 
 <!-- demo app -->
-<script src="/assets/js/demo/demo.datatable-init.js"></script>
+<!--<script src="/assets/js/demo/demo.datatable-init.js"></script>-->
 <!-- end demo js-->
 
 <!-- third party js -->
@@ -275,6 +357,7 @@
 <script src="/assets/js/vendor/dataTables.keyTable.min.js"></script>
 <script src="/assets/js/vendor/dataTables.select.min.js"></script>
 <!-- third party js ends -->
+
 
 </body>
 

@@ -1,5 +1,6 @@
-
-
+/**
+ * 查询学生
+ */
 function queryStudent() {
     let url = '/adminController/student/';
 
@@ -99,6 +100,10 @@ function queryStudent() {
     }
 }
 
+
+/**
+ * 删除学生
+ */
 function deleteStudent() {
     let url = '/adminController/student/';
 
@@ -135,3 +140,83 @@ function deleteStudent() {
         })
     }
 }
+
+/**
+ * 查询要修改的学生
+ */
+function queryModifyStudent() {
+    let url = '/adminController/student/';
+
+    // alert('whats up')
+    let selection = $("#deleteConditionSelect option:selected").index()
+    let keyword = $("#deleteKeyWord").val();
+
+    console.log('selection =', selection);
+    console.log('keyword =', keyword);
+
+    if (selection === 0) {
+        // 按学号
+        $.ajax({
+            type: "GET",
+            url: url + 'id/' + '?id=' + keyword,
+            success: (res) => {
+                let tableHTML = '';
+                let data = res.data;
+
+                if (data == null) {
+                    alert("用户不存在！");
+                    return;
+                }
+
+                console.log(data);
+
+                $("#name").html(data.name)
+                $("#context").html(data.college)
+                $("#id").html(data.id)
+                $("#passwordInput").val(data.password)
+                $("#ageInput").val(data.age)
+                $("#genderFormControlSelect").val(data.gender)
+                $("#majorFormControlSelect").val(data.major)
+                $("#collegeFormControlSelect").val(data.college)
+
+                if(data == null) {
+                    alert("未查询到数据！");
+                    return;
+                }
+
+            },
+            error: () => alert("数据查询失败")
+        })
+    } else {
+        // 按姓名
+        $.ajax({
+            type: "GET",
+            url: url + 'name/' + '?name=' + keyword,
+            success: (res) => {
+                let tableHTML = '';
+                let data = res.data;
+
+                if (data == null) {
+                    alert("用户不存在！");
+                    return;
+                }
+
+                $("#name").html(data.name)
+                $("#context").html(data.college)
+                $("#id").html(data.id)
+                $("#passwordInput").val(data.password)
+                $("#ageInput").val(data.age)
+                $("#genderFormControlSelect").val(data.gender)
+                $("#majorFormControlSelect").val(data.major)
+                $("#collegeFormControlSelect").val(data.college)
+
+                if(data == null) {
+                    alert("未查询到数据！");
+                    return;
+                }
+            },
+            error: () => alert("数据查询失败")
+        })
+    }
+}
+
